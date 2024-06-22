@@ -18,11 +18,11 @@ const createAnalytics = async (userId: number, event: 'start' | 'open_app') => {
   const res = await axios.post(
     'https://api2.amplitude.com/2/httpapi',
     {
-      api_key: 'c0fc35db3546a631eff59adae7856367',
+      api_key: process.env.AMPLITUDE_API_KEY || 'not_exist',
       events: [
         {
           event_properties: {
-            name: 'olymptrade',
+            name: 'iq_option',
           },
           device_id: userId,
           event_type: event,
