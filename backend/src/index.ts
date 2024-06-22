@@ -22,7 +22,7 @@ const createAnalytics = async (userId: number, event: 'start' | 'open_app') => {
       events: [
         {
           event_properties: {
-            name: 'iq_option',
+            name: 'stockity',
           },
           device_id: userId,
           event_type: event,
